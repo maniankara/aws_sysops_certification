@@ -1,0 +1,4 @@
+* APP: Create a bean stalk (rails) application and deploy it
+* LOAD: Create a load generator bean stalk application: https://github.com/awslabs/eb-locustio-sample
+* Create a cloud watch alarm to autoscale if the APP's EnvironmentHealth >= 5 for 5 minutes
+* Create also some dashboards
