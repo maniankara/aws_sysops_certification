@@ -2,3 +2,12 @@
 * LOAD: Create a load generator bean stalk application: https://github.com/awslabs/eb-locustio-sample
 * Create a cloud watch alarm to autoscale if the APP's EnvironmentHealth >= 5 for 5 minutes
 * Create also some dashboards
+
+ElastiCache
+* Create elasticCache cluster (m3.medium was least available) with 'default' security group
+  - Choose REDIS for simplicity with default port
+  - Note down the endpoint
+* Create a fresh EC2 instance
+  - Select default security group and add SSH and TCP (6379) in InBound connections
+* SSH to EC2 and try to telnet to redis endpoint from above in 6379 port 
+  
