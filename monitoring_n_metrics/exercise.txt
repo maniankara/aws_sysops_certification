@@ -10,4 +10,14 @@ ElastiCache
 * Create a fresh EC2 instance
   - Select default security group and add SSH and TCP (6379) in InBound connections
 * SSH to EC2 and try to telnet to redis endpoint from above in 6379 port 
-  
+
+Elastic Load Balancer
+* Create a fresh/use an existing EC2
+  - Install httpd and start the service
+  - Check with WGET if the localhost and Public IP/DNS works
+* Create an LB for it
+  - From the Ec2's dashboard create an LB
+  - Ensure the selected security group has port 80 opened for inbound connections
+  - Ensure that "Status" is showing atleast 1 in the loadbalancer's selection in EC2.
+    Otherwise, try to tune the Health check based on the need (e.g. change /index.html to /)
+  - Check with browser the Public DNS if it works  
