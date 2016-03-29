@@ -21,3 +21,4 @@ Elastic Load Balancer
   - Ensure that "Status" is showing atleast 1 in the loadbalancer's selection in EC2.
     Otherwise, try to tune the Health check based on the need (e.g. change /index.html to /)
   - Check with browser the Public DNS if it works  
+* (optional) Try to test this ElasticLB with eb-locustio
