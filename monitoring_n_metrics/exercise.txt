@@ -22,3 +22,7 @@ Elastic Load Balancer
     Otherwise, try to tune the Health check based on the need (e.g. change /index.html to /)
   - Check with browser the Public DNS if it works  
 * (optional) Try to test this ElasticLB with eb-locustio
+
+Cloud watch metrics
+* Create custom metrics
+  - Put custom metrics with 'put-metric-data' and 'get-metric-statistics'
