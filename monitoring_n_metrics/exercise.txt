@@ -26,3 +26,10 @@ Elastic Load Balancer
 Cloud watch metrics
 * Create custom metrics
   - Put custom metrics with 'put-metric-data' and 'get-metric-statistics'
+  
+Elasticache
+* Memcached
+ - Launch an t2.micro and get memcahced running (`sudo apt-get install mysql-server php5-mysql php5 php5-memcached memcached`)
+ - Try to connect with a client (e.g. ruby: https://github.com/petergoldstein/dalli)
+* Redis
+
