@@ -3,14 +3,6 @@
 * Create a cloud watch alarm to autoscale if the APP's EnvironmentHealth >= 5 for 5 minutes
 * Create also some dashboards
 
-ElastiCache
-* Create elasticCache cluster (m3.medium was least available) with 'default' security group
-  - Choose REDIS for simplicity with default port
-  - Note down the endpoint
-* Create a fresh EC2 instance
-  - Select default security group and add SSH and TCP (6379) in InBound connections
-* SSH to EC2 and try to telnet to redis endpoint from above in 6379 port 
-
 Elastic Load Balancer
 * Create a fresh/use an existing EC2
   - Install httpd and start the service
@@ -31,8 +23,13 @@ Elasticache (*Your billing ends only after you [delete your cluster](http://docs
 * Memcached
  - Launch [aws memcached cluster](https://console.aws.amazon.com/elasticache/) based on the [aws instructions](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.CreateCluster.html)
  - One should go through the complex Private/public NAT setup to get the Memcached working outside of your `vpc`. To have it simpler, launch an t2.micro and try to telnet to the [cluster node](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.ConnectToCacheNode.html) and execute those basic commands.
+ - Ensure that, the security group has port 11211 InBound connections open (from `anywhere`, again, this is only possible with Private/Public NAT-ing)
  - Try to connect with a client (e.g. ruby: https://github.com/petergoldstein/dalli)
  - Dont forget to [delete your cluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.DeleteCacheCluster.html)
 * Redis
- - 
-
+ * Create elasticCache cluster (m3.medium was least available) with 'default' security group
+  - Choose REDIS for simplicity with default port
+  - Note down the endpoint
+* Create a fresh EC2 instance
+  - Select default security group and add SSH and TCP (6379) in InBound connections
+* SSH to EC2 and try to telnet to redis endpoint from above in 6379 port 
