@@ -20,7 +20,8 @@ Cloud watch metrics
   - Put custom metrics with 'put-metric-data' and 'get-metric-statistics'
   
 Elasticache (*Your billing ends only after you [delete your cluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.DeleteCacheCluster.html)*)
- - One should go through the complex Private/public NAT setup to get the Memcached working outside of your `vpc`. To have it simpler, launch an t2.micro for this purpose.
+
+Note: _One should go through the complex Private/public NAT setup to get the `elastic cache` working outside of your `vpc`. To keep it simple, launch an extra t2.micro for this purpose._
 * Memcached
  - Launch [aws memcached cluster](https://console.aws.amazon.com/elasticache/) based on the [aws instructions](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.CreateCluster.html)
  - Ensure that, the security group has port 11211 InBound connections open (from `anywhere`, again, this is only possible with Private/Public NAT-ing)
@@ -32,3 +33,5 @@ Elasticache (*Your billing ends only after you [delete your cluster](http://docs
  - Install [redis-cli](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.ConnectToCacheNode.html#GettingStarted.ConnectToCacheNode.Redis) and execute those basic commands.
  - Try to connect with some client (e.g. ruby https://github.com/redis/redis-rb)
  - Dont forget to [delete your cluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.DeleteCacheCluster.html), do it from the `replication groups`
+ 
+Also, delete this t2.micro instance which was created for testing `aws elastic cache`
