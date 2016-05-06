@@ -27,9 +27,12 @@ Cloud watch metrics
 * Create custom metrics
   - Put custom metrics with 'put-metric-data' and 'get-metric-statistics'
   
-Elasticache
+Elasticache (*Your billing ends only after you [delete your cluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.DeleteCacheCluster.html)*)
 * Memcached
- - Launch an t2.micro and get memcahced running (`sudo apt-get install mysql-server php5-mysql php5 php5-memcached memcached`)
+ - Launch [aws memcached cluster](https://console.aws.amazon.com/elasticache/) based on the [aws instructions](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.CreateCluster.html)
+ - One should go through the complex Private/public NAT setup to get the Memcached working outside of your `vpc`. To have it simpler, launch an t2.micro and try to telnet to the [cluster node](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.ConnectToCacheNode.html) and execute those basic commands.
  - Try to connect with a client (e.g. ruby: https://github.com/petergoldstein/dalli)
+ - Dont forget to [delete your cluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.DeleteCacheCluster.html)
 * Redis
+ - 
 
