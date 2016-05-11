@@ -4,11 +4,13 @@
 * Create also some dashboards
 
 EBS monitoring
-* Create a fresh/use an existing EC2
+* Create a fresh/use an existing EC2 and enable EBS monitoring
   - Ensure that you have atleast one volume in use from here: http://console.aws.amazon.com/ec2
   - Note the volumeId 
-  - Open cloud watch: http://console.aws.amazon.com/cloudwatch an
-  - 
+  - Open cloud watch: http://console.aws.amazon.com/cloudwatch and you are able to see _EBS Metrics_. If not, then choose a different region from the right top corner
+  - Open _EBS Metrics_ and select the noted volumeId's metrics and generate graphs.
+  - (Optional): Try to generate cloud watch alarms based on some behavior of the EBS metrics
+
 Elastic Load Balancer
 * Create a fresh/use an existing EC2
   - Install httpd and start the service
