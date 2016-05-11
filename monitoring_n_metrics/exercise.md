@@ -3,6 +3,12 @@
 * Create a cloud watch alarm to autoscale if the APP's EnvironmentHealth >= 5 for 5 minutes
 * Create also some dashboards
 
+EBS monitoring
+* Create a fresh/use an existing EC2
+  - Ensure that you have atleast one volume in use from here: http://console.aws.amazon.com/ec2
+  - Note the volumeId 
+  - Open cloud watch: http://console.aws.amazon.com/cloudwatch an
+  - 
 Elastic Load Balancer
 * Create a fresh/use an existing EC2
   - Install httpd and start the service
