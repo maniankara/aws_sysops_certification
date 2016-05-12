@@ -41,5 +41,14 @@ Note: _One should go through the complex Private/public NAT setup to get the `el
  - Install [redis-cli](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.ConnectToCacheNode.html#GettingStarted.ConnectToCacheNode.Redis) and execute those basic commands.
  - Try to connect with some client (e.g. ruby https://github.com/redis/redis-rb)
  - Dont forget to [delete your cluster](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/GettingStarted.DeleteCacheCluster.html), do it from the `replication groups`
- 
-Also, delete this t2.micro instance which was created for testing `aws elastic cache`
+ - Also, delete this t2.micro instance which was created for testing `aws elastic cache`
+
+AWS billing
+* Individual/Consolidated billing hourly/detailed hourly
+ - Assuming atleast 1 EC2 (t2.micro) has been running for more than a day in your AWS account
+ - Generate the 4 billings (Select your account at top right corner->Billing and cost management->preferences->select all)
+ - Provide a fresh s3 bucket which does not exist and click the below link to create one. Verify after that is created.
+* Cloud watch metrics and alarms
+ - Choose your region as "U.S East (N.Virginia)" as there not CloudWatch billing metrics available for other regions at the time of creation of the document.
+ - Create dashboard by selecting some metrics
+ - 
