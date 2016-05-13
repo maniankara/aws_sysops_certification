@@ -8,7 +8,10 @@ Auto Scaling
  - _Configure scaling policy_, _Review_ and _Create autoscaling group_ use the defaults
  - Ensure an [EC2 instanace](https://console.aws.amazon.com/ec2/) is running now
  - Select the group under _Auto scaling groups_ and in the tab _Scaling policy_ add a new policy and give it a name
- - _Create an alarm_ whenever `maximum cpu utilization` is `>=` 10 `percent` for atleast `1` consecutive period of `1 minute`
+ - _Create an alarm_ whenever `maximum cpu utilization` is `>=` 5 `percent` for atleast `1` consecutive period of `1 minute`
+ - Monitor from cloudWatch when the alarms are created
+ - Try to generate cpu load if the cpu is still low.
+ - Cleanup: Delete the _Auto scaling group_ and then _Launch configuration_ 
 
 
 Sticky sessions
