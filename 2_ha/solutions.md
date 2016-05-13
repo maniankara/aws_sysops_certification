@@ -9,7 +9,7 @@ Auto Scaling
  - Ensure an [EC2 instanace](https://console.aws.amazon.com/ec2/) is running now
  - Select the group under _Auto scaling groups_ and in the tab _Scaling policy_ add a new policy and give it a name
  - _Create an alarm_ whenever `maximum cpu utilization` is `>=` 10 `percent` for atleast `1` consecutive period of `1 minute`
- - 
+
 
 Sticky sessions
 * Configure sticky session with [lb](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-sticky-sessions.html)
