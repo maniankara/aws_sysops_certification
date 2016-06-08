@@ -10,10 +10,9 @@ Sticky sessions
  - Create a new lb and add the above instances to that.
  - Verify if the load balancing happens by hard refreshing the lb's url (sometime private window browsing is needed)
 
-   (a) Test application based sticky session
+     (a) Test application based sticky session
    - Now, [enable sticky session](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-sticky-sessions.html) based on time (say 20 seconds) and try again to refresh the lb url.
     - You should note that, the switching of the hosts happens only after sticky timeout (20 seconds in this case)
-
 
      (b) Test duration based sticky session
    - Now, [enable sticky session](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-sticky-sessions.html) based on duration (say 20 seconds) and try again to refresh the lb url.
