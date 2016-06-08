@@ -18,3 +18,6 @@ Sticky sessions
    - Now, [enable sticky session](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-sticky-sessions.html) based on duration (say 20 seconds) and try again to refresh the lb url.
     - You should note that, the switching of the hosts happens only after sticky timeout (20 seconds in this case)
  
+RDS backup and restore
+* Restore RDS to and from S3
+* Pilot instance etc.
