@@ -8,7 +8,7 @@ Solutions for Deployment and provisioning
   - Soon after the instance is ready, choose the 'Apps' section and press 'deploy'
   - After the deployment is sucessfull, select the 'instances' tab again and click the value in public ip
   - The nodejs app should be up and running.
-  - Clean up: In the following order: Stop the instance, delete the instance, delete the layer, delete the stack 
+  - Clean up: In the following order: Stop the instance, delete the app, delete the instance, delete the layer, delete the stack 
    
 * Opsworks photo share app using ruby
   - Open https://console.aws.amazon.com/opsworks
