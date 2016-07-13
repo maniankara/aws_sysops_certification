@@ -13,4 +13,4 @@ Solutions for Deployment and provisioning
 * Opsworks photo share app using ruby
   - Open https://console.aws.amazon.com/opsworks
   - 'Add stack' and select 'Chef 12 Stack' and fillin the needed values.
-  - Turn on 'Use custom Chef cookbooks' and provide the git repository: https://github.com/awslabs/opsworks-demo-rails-photo-share-app.git
+  - Turn on 'Use custom Chef cookbooks' and provide the [git repository]( https://github.com/awslabs/opsworks-demo-rails-photo-share-app.git)
