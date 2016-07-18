@@ -5,6 +5,4 @@ Implement different types of disaster recovery
 * multisite architecture
 * Hybrid warm standby architecture
 
-Create a photo share app using Opsworks
-* use this: https://github.com/awslabs/opsworks-demo-rails-photo-share-app.git
-* 
+Reference: https://media.amazonwebservices.com/AWS_Disaster_Recovery.pdf
