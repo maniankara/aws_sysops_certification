@@ -1,6 +1,8 @@
-Create the default OpsWorks stack
-* Create the default opsworks stack and open the nodejs web page
-
-Create a photo share app using Opsworks
-* use this: https://github.com/awslabs/opsworks-demo-rails-photo-share-app.git
-* 
+Pilot light architecture 
+* Create an ec2 instance and in the 'Configure instance details->Advanced details' section, add the following scriptlet
+```
+#!/bin/bash
+sudo apt-get install -y git apache2;
+cd /var/www/html;
+sudo git clone https://github.com/airpair/T0021-airpair-angularjs-tutorial.git demo
+```
