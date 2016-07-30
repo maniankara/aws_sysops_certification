@@ -1,4 +1,10 @@
-S3 bucket policy:
+* Assumitions:
+ * Test user: anovilTest
+ * Test bucket: iam-anovil-test
+ * Home folder: home/anovil-test
+
+S3 bucket policy: 
+
 ```
 {
     "Version": "2012-10-17",
