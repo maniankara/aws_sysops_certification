@@ -1,10 +1,65 @@
-Pilot light architecture with [simple javascript app](https://github.com/airpair/T0021-airpair-angularjs-tutorial)
-* Create an ec2 instance and in the 'Configure instance details->Advanced details' section, add the following scriptlet
+S3 bucket policy:
 ```
-#!/bin/bash
-sudo apt-get install -y git apache2;
-cd /var/www/html;
-sudo git clone https://github.com/airpair/T0021-airpair-angularjs-tutorial.git demo
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1469871826000",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListAllMyBuckets"
+            ],
+            "Resource": [
+                "arn:aws:s3:::*"
+            ]
+        },
+        {
+            "Sid": "Stmt1469871908000",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": [
+                "arn:aws:s3:::iam-anovil-test"
+            ]
+        },
+        {
+            "Sid": "Stmt1469872164000",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "s3:prefix": "home/anovil-test/*"
+                }
+            },
+            "Resource": [
+                "arn:aws:s3:::iam-anovil-test"
+            ]
+        },
+        {
+            "Sid": "Stmt1469872264000",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::iam-anovil-test/home/anovil-test"
+            ]
+        },
+        {
+            "Sid": "Stmt1469872306000",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::iam-anovil-test/home/anovil-test/*"
+            ]
+        }
+    ]
+}
 ```
-* Ensure that, the security group which you choose allows connections to that instance on port 80.
-* After the instance is up, http://PublicIP/demo should take you to the simple js app
