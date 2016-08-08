@@ -10,6 +10,8 @@ EBS monitoring
   - Open cloud watch: http://console.aws.amazon.com/cloudwatch and you are able to see _EBS Metrics_. If not, then choose a different region from the right top corner
   - Open _EBS Metrics_ and select the noted volumeId's metrics and generate graphs.
   - (Optional): Try to generate cloud watch alarms based on some behavior of the EBS metrics
+* Create and resize a fresh ebs on ec2
+  - Its impossible to extend or contract an existing ebs, do it with snapshots.
 
 Elastic Load Balancer
 * Create a fresh/use an existing EC2
